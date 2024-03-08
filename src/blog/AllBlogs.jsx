@@ -60,7 +60,7 @@ const AllBlogs = () => {
       }
     };
   return (
-    <Container className="md:mx-[75px] mx-4 mt-10">
+    <Container className="md:mx-[75px] mx-4 my-10">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {blogData.slice(0, displayedBlogs).map((blog, index) => (
           <div key={index} className="h-full">

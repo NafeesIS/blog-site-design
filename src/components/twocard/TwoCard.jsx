@@ -2,17 +2,19 @@ import React from "react";
 import Container from "../ui/Container";
 import { Button } from "../ui/button";
 import Image from "next/image";
-import banner from "@/images/banner/banner.png";
+import mobile from "@/images/banner/mobile.jpg";
 import robot from "@/images/banner/robot.jpg";
+import { ContactUs } from "../shared/ContactUs";
+import { FaPaperPlane } from "react-icons/fa"
 const TwoCard = () => {
   return (
     <Container className="md:mx-[75px] mx-4 my-10">
-      <div className="flex md:flex-row flex-col justify-between gap-16">
+      <div className="flex lg:flex-row flex-col justify-between gap-4">
         <div className="justify-start items-start gap-[30px] h-[500px] md:h-[652px] inline-flex">
           <div className="max-w-[850px] flex-col justify-start items-start inline-flex">
             <Image
               className="h-[200px] md:h-[400px]"
-              src={banner}
+              src={mobile}
               alt="banner"
             />
             <div className="block md:hidden">
@@ -60,18 +62,51 @@ const TwoCard = () => {
             </div>
           </div>
         </div>
-        <div className=" ">
+        <div className="max-w-[350px] mx-auto md:w-[350px] md:h-[652px] mt-4 lg:mt-0">
           <Image
-            className="h-[200px] md:w-[300px] md:h-[652px] relative"
+            className="h-[400px] relative md:w-[350px] md:h-[652px] "
             src={robot}
             alt="banner"
           />
-          <div className="bg-white absolute">
-            <p> Do you need any creative service for your business?</p>
+          <div className="bg-white max-w-[300px] absolute bottom-0 p-4 m-4">
+            <p className="text-xl font-semibold mb-2 font-['DM Sans'] "> Do you need any creative service for your business?</p>
             <div className="">
-              <Button size="sm" variant="outline" className="rounded-none">
-                Read More
-              </Button>
+            <ContactUs button='Lets Talk'>
+        <div>
+         <div className="bg-[#2C2347] py-6 px-5">
+         <h6 className=" text-2xl text-white font-semibold">Contact Us</h6>
+         </div>
+        <form  className='bg-[#FFFFFF] opacity-70 mt-10 lg:mt-0 w-full p-5 md:p-10 secondary-color' >
+               <div className="flex flex-col md:flex-row w-full justify-between">
+               <div className="mb-5">
+                    <label>
+                        <span className="font-semibold lg:text-lg">Name</span>
+                    </label>
+                    <input name="name" type="text" placeholder="Your Name" className="bg-[#111A28] border placeholder:font-semibold border-gray-500 p-3 rounded-lg w-full" required />
+                </div>
+                <div className="mb-5">
+                    <label>
+                        <span className="font-semibold lg:text-lg">Email</span>
+                    </label>
+                    <input name="email" type="email" placeholder="Your Email" className="bg-[#111A28] border placeholder:font-semibold border-gray-500 p-3 rounded-lg w-full" required />
+                </div>
+               </div>
+                <div className="mb-5">
+                    <label>
+                        <span className="font-semibold lg:text-lg">Subject</span>
+                    </label>
+                    <input name="subject" type="email" placeholder="Subject" className="bg-[#111A28] border placeholder:font-semibold border-gray-500 p-3 rounded-lg w-full" required />
+                </div>
+                <div className="mb-5">
+                    <label>
+                        <span className="font-semibold lg:text-lg">Message</span>
+                    </label>
+                    <textarea name="message" type="text" placeholder="Your Name" className="bg-[#111A28] border placeholder:font-semibold border-gray-500 p-3 rounded-lg w-full h-28 resize-none" />
+                </div>
+                <button className='my-btn bg-[#2C2347] px-4 py-2 text-white inline-flex items-center gap-3 uppercase' type="submit"><FaPaperPlane /> Send</button>
+            </form>
+        </div>
+        </ContactUs>
             </div>
           </div>
         </div>
