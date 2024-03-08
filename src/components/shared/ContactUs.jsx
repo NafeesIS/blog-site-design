@@ -11,7 +11,7 @@ export function ContactUs({ className, children,button }) {
         <DialogTrigger asChild>
           <Button
             variant="ghost"
-            className="group h-10 w-24 cursor-pointer p-2 text-white transition-all bg-indigo-600 md:h-10 md:w-24"
+            className="group h-10 w-24 cursor-pointer p-2 text-white transition-all bg-indigo-900 md:h-10 md:w-24"
             asChild
           >
             <div className="relative">
